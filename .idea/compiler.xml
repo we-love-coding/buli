@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="content-feign" />
+        <module name="content-test" />
+        <module name="order-feign" />
+        <module name="product-facade" />
+        <module name="user-common" />
+        <module name="user-domain" />
+        <module name="promotion-feign" />
+        <module name="user-dal" />
+        <module name="content-dal" />
+        <module name="product-dal" />
+        <module name="promotion-dal" />
+        <module name="user-feign" />
+        <module name="order-domain" />
+        <module name="user-test" />
+        <module name="user-api" />
+        <module name="content-common" />
+        <module name="content-domain" />
+        <module name="promotion-test" />
+        <module name="order-dal" />
+        <module name="user-facade" />
+        <module name="order-api" />
+        <module name="order-test" />
+        <module name="product-test" />
+        <module name="order-facade" />
+        <module name="product-common" />
+        <module name="product-domain" />
+        <module name="product-feign" />
+        <module name="promotion-domain" />
+        <module name="promotion-facade" />
+        <module name="promotion-common" />
+        <module name="content-api" />
+        <module name="product-api" />
+        <module name="content-facade" />
+        <module name="promotion-api" />
+        <module name="order-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="content" target="1.8" />
+      <module name="content-api" target="1.8" />
+      <module name="content-common" target="1.8" />
+      <module name="content-dal" target="1.8" />
+      <module name="content-domain" target="1.8" />
+      <module name="content-facade" target="1.8" />
+      <module name="content-feign" target="1.8" />
+      <module name="content-test" target="1.8" />
+      <module name="order-api" target="1.8" />
+      <module name="order-common" target="1.8" />
+      <module name="order-dal" target="1.8" />
+      <module name="order-domain" target="1.8" />
+      <module name="order-facade" target="1.8" />
+      <module name="order-feign" target="1.8" />
+      <module name="order-parent" target="1.8" />
+      <module name="order-test" target="1.8" />
+      <module name="product-api" target="1.8" />
+      <module name="product-common" target="1.8" />
+      <module name="product-dal" target="1.8" />
+      <module name="product-domain" target="1.8" />
+      <module name="product-facade" target="1.8" />
+      <module name="product-feign" target="1.8" />
+      <module name="product-parent" target="1.8" />
+      <module name="product-test" target="1.8" />
+      <module name="promotion-api" target="1.8" />
+      <module name="promotion-common" target="1.8" />
+      <module name="promotion-dal" target="1.8" />
+      <module name="promotion-domain" target="1.8" />
+      <module name="promotion-facade" target="1.8" />
+      <module name="promotion-feign" target="1.8" />
+      <module name="promotion-parent" target="1.8" />
+      <module name="promotion-test" target="1.8" />
+      <module name="user-api" target="1.8" />
+      <module name="user-common" target="1.8" />
+      <module name="user-dal" target="1.8" />
+      <module name="user-domain" target="1.8" />
+      <module name="user-facade" target="1.8" />
+      <module name="user-feign" target="1.8" />
+      <module name="user-parent" target="1.8" />
+      <module name="user-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="content-api" options="-parameters" />
+      <module name="content-common" options="-parameters" />
+      <module name="content-dal" options="-parameters" />
+      <module name="content-domain" options="-parameters" />
+      <module name="content-facade" options="-parameters" />
+      <module name="content-feign" options="-parameters" />
+      <module name="content-test" options="-parameters" />
+      <module name="order-api" options="-parameters" />
+      <module name="order-common" options="-parameters" />
+      <module name="order-dal" options="-parameters" />
+      <module name="order-domain" options="-parameters" />
+      <module name="order-facade" options="-parameters" />
+      <module name="order-feign" options="-parameters" />
+      <module name="order-test" options="-parameters" />
+      <module name="product-api" options="-parameters" />
+      <module name="product-common" options="-parameters" />
+      <module name="product-dal" options="-parameters" />
+      <module name="product-domain" options="-parameters" />
+      <module name="product-facade" options="-parameters" />
+      <module name="product-feign" options="-parameters" />
+      <module name="product-test" options="-parameters" />
+      <module name="promotion-api" options="-parameters" />
+      <module name="promotion-common" options="-parameters" />
+      <module name="promotion-dal" options="-parameters" />
+      <module name="promotion-domain" options="-parameters" />
+      <module name="promotion-facade" options="-parameters" />
+      <module name="promotion-feign" options="-parameters" />
+      <module name="promotion-test" options="-parameters" />
+      <module name="user-api" options="-parameters" />
+      <module name="user-common" options="-parameters" />
+      <module name="user-dal" options="-parameters" />
+      <module name="user-domain" options="-parameters" />
+      <module name="user-facade" options="-parameters" />
+      <module name="user-feign" options="-parameters" />
+      <module name="user-test" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bibu.product.dal.mapper.GoodsCommentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bibu.product.dal.entity.GoodsComment">
+        <id column="id" property="id" />
+        <result column="goods_id" property="goodsId" />
+        <result column="user_id" property="userId" />
+        <result column="content" property="content" />
+        <result column="score" property="score" />
+        <result column="comment_time" property="commentTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="create_time" property="createTime" />
+        <result column="updater" property="updater" />
+        <result column="creator" property="creator" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_id, user_id, content, score, comment_time, update_time, create_time, updater, creator, is_delete
+    </sql>
+
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/bibu.iml" filepath="$PROJECT_DIR$/.idea/bibu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content.iml" filepath="$PROJECT_DIR$/content/content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-api/content-api.iml" filepath="$PROJECT_DIR$/content/content-api/content-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-common/content-common.iml" filepath="$PROJECT_DIR$/content/content-common/content-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-dal/content-dal.iml" filepath="$PROJECT_DIR$/content/content-dal/content-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-domain/content-domain.iml" filepath="$PROJECT_DIR$/content/content-domain/content-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-facade/content-facade.iml" filepath="$PROJECT_DIR$/content/content-facade/content-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-feign/content-feign.iml" filepath="$PROJECT_DIR$/content/content-feign/content-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/content-test/content-test.iml" filepath="$PROJECT_DIR$/content/content-test/content-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-api/order-api.iml" filepath="$PROJECT_DIR$/order/order-api/order-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-common/order-common.iml" filepath="$PROJECT_DIR$/order/order-common/order-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-dal/order-dal.iml" filepath="$PROJECT_DIR$/order/order-dal/order-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-domain/order-domain.iml" filepath="$PROJECT_DIR$/order/order-domain/order-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-facade/order-facade.iml" filepath="$PROJECT_DIR$/order/order-facade/order-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-feign/order-feign.iml" filepath="$PROJECT_DIR$/order/order-feign/order-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-parent.iml" filepath="$PROJECT_DIR$/order/order-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order/order-test/order-test.iml" filepath="$PROJECT_DIR$/order/order-test/order-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-api/product-api.iml" filepath="$PROJECT_DIR$/product/product-api/product-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-common/product-common.iml" filepath="$PROJECT_DIR$/product/product-common/product-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-dal/product-dal.iml" filepath="$PROJECT_DIR$/product/product-dal/product-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-domain/product-domain.iml" filepath="$PROJECT_DIR$/product/product-domain/product-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-facade/product-facade.iml" filepath="$PROJECT_DIR$/product/product-facade/product-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-feign/product-feign.iml" filepath="$PROJECT_DIR$/product/product-feign/product-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-parent.iml" filepath="$PROJECT_DIR$/product/product-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product/product-test/product-test.iml" filepath="$PROJECT_DIR$/product/product-test/product-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-api/promotion-api.iml" filepath="$PROJECT_DIR$/promotion/promotion-api/promotion-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-common/promotion-common.iml" filepath="$PROJECT_DIR$/promotion/promotion-common/promotion-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-dal/promotion-dal.iml" filepath="$PROJECT_DIR$/promotion/promotion-dal/promotion-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-domain/promotion-domain.iml" filepath="$PROJECT_DIR$/promotion/promotion-domain/promotion-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-facade/promotion-facade.iml" filepath="$PROJECT_DIR$/promotion/promotion-facade/promotion-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-feign/promotion-feign.iml" filepath="$PROJECT_DIR$/promotion/promotion-feign/promotion-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-parent.iml" filepath="$PROJECT_DIR$/promotion/promotion-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/promotion/promotion-test/promotion-test.iml" filepath="$PROJECT_DIR$/promotion/promotion-test/promotion-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-api/user-api.iml" filepath="$PROJECT_DIR$/user/user-api/user-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-common/user-common.iml" filepath="$PROJECT_DIR$/user/user-common/user-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-dal/user-dal.iml" filepath="$PROJECT_DIR$/user/user-dal/user-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-domain/user-domain.iml" filepath="$PROJECT_DIR$/user/user-domain/user-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-facade/user-facade.iml" filepath="$PROJECT_DIR$/user/user-facade/user-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-feign/user-feign.iml" filepath="$PROJECT_DIR$/user/user-feign/user-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-parent.iml" filepath="$PROJECT_DIR$/user/user-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user-test/user-test.iml" filepath="$PROJECT_DIR$/user/user-test/user-test.iml" />
+    </modules>
+  </component>
+</project>

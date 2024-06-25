@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bibu.content.dal.mapper.ContentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bibu.content.dal.entity.Content">
+        <id column="id" property="id" />
+        <result column="content" property="content" />
+        <result column="user_id" property="userId" />
+        <result column="like_num" property="likeNum" />
+        <result column="view_num" property="viewNum" />
+        <result column="status" property="status" />
+        <result column="deploy_time" property="deployTime" />
+        <result column="is_sensible" property="isSensible" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="updater" property="updater" />
+        <result column="creator" property="creator" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, content, user_id, like_num, view_num, status, deploy_time, is_sensible, create_time, update_time, updater, creator, is_delete
+    </sql>
+
+</mapper>

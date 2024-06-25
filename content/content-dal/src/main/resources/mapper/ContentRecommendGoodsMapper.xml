@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bibu.content.dal.mapper.ContentRecommendGoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bibu.content.dal.entity.ContentRecommendGoods">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="content_id" property="contentId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="like_num" property="likeNum" />
+        <result column="status" property="status" />
+        <result column="update_time" property="updateTime" />
+        <result column="create_time" property="createTime" />
+        <result column="updater" property="updater" />
+        <result column="creator" property="creator" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, content_id, goods_id, like_num, status, update_time, create_time, updater, creator, is_delete
+    </sql>
+
+</mapper>
