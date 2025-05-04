@@ -47,19 +47,19 @@
 			<version>6.2.3</version>
 		</dependency>
 
-		<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.redisson/redisson &ndash;&gt;-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.redisson</groupId>-->
-		<!--			<artifactId>redisson</artifactId>-->
-		<!--			<version>3.27.2</version>-->
-		<!--		</dependency>-->
+				<!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+<!--				<dependency>-->
+<!--					<groupId>org.redisson</groupId>-->
+<!--					<artifactId>redisson</artifactId>-->
+<!--					<version>3.27.2</version>-->
+<!--				</dependency>-->
 
-		<!-- https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter -->
-<!--		<dependency>-->
-<!--			<groupId>org.redisson</groupId>-->
-<!--			<artifactId>redisson-spring-boot-starter</artifactId>-->
-<!--			<version>3.27.2</version>-->
-<!--		</dependency>-->
+<!--		 https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter -->
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson-spring-boot-starter</artifactId>
+			<version>3.27.2</version>
+		</dependency>
 	</dependencies>
 
 

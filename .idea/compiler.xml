@@ -17,30 +17,30 @@
         <module name="user-dal" />
         <module name="content-dal" />
         <module name="product-dal" />
+        <module name="user-test" />
         <module name="promotion-dal" />
         <module name="user-feign" />
         <module name="order-domain" />
-        <module name="user-test" />
+        <module name="product-test" />
         <module name="user-api" />
+        <module name="user-facade" />
         <module name="content-common" />
         <module name="content-domain" />
-        <module name="promotion-test" />
-        <module name="order-dal" />
-        <module name="user-facade" />
+        <module name="promotion-facade" />
         <module name="order-api" />
         <module name="order-test" />
-        <module name="product-test" />
         <module name="order-facade" />
+        <module name="promotion-api" />
         <module name="product-common" />
         <module name="product-domain" />
         <module name="product-feign" />
         <module name="promotion-domain" />
-        <module name="promotion-facade" />
+        <module name="promotion-test" />
         <module name="promotion-common" />
         <module name="content-api" />
         <module name="product-api" />
         <module name="content-facade" />
-        <module name="promotion-api" />
+        <module name="order-dal" />
         <module name="order-common" />
       </profile>
     </annotationProcessing>

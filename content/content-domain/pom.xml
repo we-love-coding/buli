@@ -55,11 +55,11 @@
 		<!--		</dependency>-->
 
 		<!-- https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter -->
-<!--		<dependency>-->
-<!--			<groupId>org.redisson</groupId>-->
-<!--			<artifactId>redisson-spring-boot-starter</artifactId>-->
-<!--			<version>3.27.2</version>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson-spring-boot-starter</artifactId>
+			<version>3.27.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.bibu</groupId>
