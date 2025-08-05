@@ -1,6 +1,7 @@
 package com.bibu.promotion.facade.request;
 
 import com.bibu.promotion.facade.parent.ParentRequest;
+import com.sun.tools.javac.util.List;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,5 +14,6 @@ import lombok.Setter;
 public class CouponTemplateObtainReq extends ParentRequest {
 
     private String templateCode;
+    private List<String> templateCodeList;
 
 }

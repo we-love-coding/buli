@@ -21,4 +21,6 @@ public interface CouponAccountService extends IService<CouponAccount> {
     List<CouponAccount> getCouponAccountList(CouponAccountDTO couponAccountDTO);
 
     List<Long> getCouponTemplateIdList(CouponAccountDTO couponAccountDTO);
+
+    long countUserCoupon(Long couponTemplateId, Long userId);
 }

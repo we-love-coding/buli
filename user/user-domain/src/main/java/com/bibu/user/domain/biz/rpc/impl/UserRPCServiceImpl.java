@@ -6,26 +6,23 @@ import com.bibu.user.common.exceptions.UserException;
 import com.bibu.user.dal.entity.UserInfo;
 import com.bibu.user.domain.biz.rpc.UserRPCService;
 import com.bibu.user.dal.entity.UserAddress;
+import com.bibu.user.domain.redis.RedisClient;
 import com.bibu.user.domain.service.UserInfoService;
 import com.bibu.user.facade.request.UserBatchSearchReq;
 import com.bibu.user.facade.request.UserTokenReq;
 import com.bibu.user.facade.response.UserAddressResp;
 import com.bibu.user.facade.response.UserInfoResp;
 import com.bibu.user.domain.service.UserAddressService;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.x.common.utils.BeanUtils;
 import com.x.common.utils.JwtUtils;
 import org.apache.commons.collections.CollectionUtils;
-import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /**
  * Author XY
@@ -35,7 +32,7 @@ import java.util.stream.Collectors;
 public class UserRPCServiceImpl implements UserRPCService {
 
     @Autowired
-    private RedissonClient redissonClient;
+    private RedisClient redisClient;
     @Autowired
     private UserAddressService userAddressService;
     @Autowired
@@ -46,7 +43,7 @@ public class UserRPCServiceImpl implements UserRPCService {
         String token = req.getToken();
         String userIdStr = JwtUtils.getDecodedJWT(token).getSubject();
         String userIdKey = "userIdKey:" +  userIdStr;
-        String json = (String)redissonClient.getBucket(userIdKey).get();
+        String json = redisClient.get(userIdKey);
         UserInfoResp userInfoResp = JSON.parseObject(json, UserInfoResp.class);
         if (Objects.isNull(userInfoResp)) {
             throw new UserException(UserExceptionEnum.USER_NOT_EXIST);

@@ -51,4 +51,13 @@ public class CouponAccountServiceImpl extends ServiceImpl<CouponAccountMapper, C
     public List<Long> getCouponTemplateIdList(CouponAccountDTO couponAccountDTO) {
         return null;
     }
+
+    @Override
+    public long countUserCoupon(Long couponTemplateId, Long userId) {
+        QueryWrapper<CouponAccount> wrapper = new QueryWrapper<>();
+        wrapper.eq("coupon_template_id", couponTemplateId);
+        wrapper.eq("user_id", userId);
+        wrapper.eq("is_delete", YesOrNoEnum.NO.getStatus());
+        return count(wrapper);
+    }
 }

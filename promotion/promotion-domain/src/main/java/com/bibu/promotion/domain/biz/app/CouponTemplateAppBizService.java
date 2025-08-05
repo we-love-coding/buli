@@ -11,5 +11,9 @@ import java.util.Map;
 public interface CouponTemplateAppBizService {
     boolean obtainCoupon(CouponTemplateObtainReq req);
 
+    boolean obtainCouponBatch(CouponTemplateObtainReq req);
+
     void setCouponObtainNum(Map<String, String> map);
+
+    void setUserCouponObtainNum(Map<String, String> map);
 }

@@ -19,6 +19,6 @@ public class WebConfigurer implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(userTokenCheckInterceptor)
-                .addPathPatterns("/**").excludePathPatterns("/ground/admin/**");
+                .addPathPatterns("/app/**").excludePathPatterns("/ground/admin/**");
     }
 }

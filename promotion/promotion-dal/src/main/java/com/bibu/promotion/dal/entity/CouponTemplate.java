@@ -64,4 +64,6 @@ public class CouponTemplate implements Serializable {
 
     private Integer offerNum;
 
+    private Integer limitNum;
+
 }

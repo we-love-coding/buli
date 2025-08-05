@@ -17,6 +17,7 @@ import java.util.List;
 public interface CouponTemplateService extends IService<CouponTemplate> {
 
     CouponTemplate getCouponTemplate(String templateCode);
+    List<CouponTemplate> getCouponTemplateListByCodeList(List<String> templateCodeList);
 
     List<CouponTemplate> getCouponTemplateList(List<Long> couponTemplateIdList);
 

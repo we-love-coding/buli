@@ -33,5 +33,10 @@ public class CouponTemplateAppController {
         return ResponseResult.success(couponTemplateAppBizService.obtainCoupon(req));
     }
 
+    @PostMapping("/obtainCouponBatch")
+    public ResponseResult<Boolean> obtainCouponBatch(@RequestBody CouponTemplateObtainReq req) {
+        return ResponseResult.success(couponTemplateAppBizService.obtainCouponBatch(req));
+    }
+
 }
 

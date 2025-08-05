@@ -9,6 +9,7 @@ import com.bibu.user.common.exceptions.UserException;
 import com.bibu.user.dal.dto.UserSignupDTO;
 import com.bibu.user.dal.entity.UserInfo;
 import com.bibu.user.domain.biz.app.UserInfoBizService;
+import com.bibu.user.domain.redis.RedisClient;
 import com.bibu.user.domain.service.UserInfoService;
 import com.bibu.user.facade.request.UserLoginReq;
 import com.bibu.user.facade.request.UserSignupReq;
@@ -19,13 +20,15 @@ import com.x.common.utils.BeanUtils;
 import com.x.common.utils.JwtUtils;
 import com.x.common.utils.RegexUtils;
 import com.x.common.enums.ExceptionEnum;
+
 import org.apache.commons.lang3.StringUtils;
-import org.redisson.api.RedissonClient;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Author XY
@@ -41,7 +44,7 @@ public class UserInfoBizServiceImpl implements UserInfoBizService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
-    private RedissonClient redissonClient;
+    private RedisClient redisClient;
 
     @Override
     public String signup(UserSignupReq req) {
@@ -134,8 +137,8 @@ public class UserInfoBizServiceImpl implements UserInfoBizService {
         userInfoResp.setRefreshToken(refreshToken);
         String userIdKey = "userIdKey:" +  userIdStr;
         String refreshTokenKey = "refreshTokenKey:" +  refreshToken;
-        redissonClient.getBucket(userIdKey).set(JSON.toJSONString(userInfoResp), Duration.ofDays(60));
-        redissonClient.getBucket(refreshTokenKey).set(JSON.toJSONString(Boolean.TRUE), Duration.ofDays(61));
+        redisClient.setWithTTL(userIdKey, JSON.toJSONString(userInfoResp), 60, TimeUnit.DAYS);
+        redisClient.setWithTTL(refreshTokenKey, JSON.toJSONString(Boolean.TRUE), 61, TimeUnit.DAYS);
         return userInfoResp;
     }
 
@@ -143,13 +146,8 @@ public class UserInfoBizServiceImpl implements UserInfoBizService {
     public void logout() {
         UserInfoDTO user = UserInfoContext.getUser();
         Long userId = user.getUserId();
-        boolean isSuccess = userInfoService.deleteUser(userId);
-        if (!isSuccess) {
-            throw new UserException(ExceptionEnum.NETWORK_ERROR);
-        }
-
         String userIdKey = "userIdKey:" + userId;
-        redissonClient.getBucket(userIdKey).delete();
+        redisClient.delete(userIdKey);
     }
 
     @Override
@@ -173,8 +171,8 @@ public class UserInfoBizServiceImpl implements UserInfoBizService {
     @Override
     public String findTokenByRefreshToken(String refreshToken) {
         String refreshTokenKey = "refreshTokenKey:" + refreshToken;
-        Boolean isBool = (Boolean)redissonClient.getBucket(refreshTokenKey).get();
-        if (isBool == null || !isBool) {
+        String isBoolStr = redisClient.get(refreshTokenKey);
+        if (StringUtils.isBlank(isBoolStr) || StringUtils.equals(isBoolStr, "false")) {
             return null;
         }
         String userIdStr = JwtUtils.getDecodedJWT(refreshToken).getSubject();
@@ -195,8 +193,8 @@ public class UserInfoBizServiceImpl implements UserInfoBizService {
 
         String userIdKey = "userIdKey:" +  userIdStr;
         String newRefreshTokenKey = "refreshTokenKey" + newRefreshToken;
-        redissonClient.getBucket(userIdKey).set(JSON.toJSONString(userInfoResp), Duration.ofDays(60));
-        redissonClient.getBucket(newRefreshTokenKey).set(JSON.toJSONString(Boolean.TRUE), Duration.ofDays(61));
+        redisClient.setWithTTL(userIdKey, JSON.toJSONString(userInfoResp), 60, TimeUnit.DAYS);
+        redisClient.setWithTTL(newRefreshTokenKey, JSON.toJSONString(Boolean.TRUE), 61, TimeUnit.DAYS);
         return token;
     }
 }

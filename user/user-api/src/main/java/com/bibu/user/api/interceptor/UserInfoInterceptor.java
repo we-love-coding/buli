@@ -1,11 +1,13 @@
 package com.bibu.user.api.interceptor;
 
+import com.alibaba.fastjson.JSON;
+import com.bibu.user.domain.redis.RedisClient;
 import com.bibu.user.facade.response.UserInfoResp;
 import com.x.common.context.UserInfoContext;
 import com.x.common.context.dto.UserInfoDTO;
 import com.x.common.utils.JwtUtils;
+
 import org.apache.commons.lang3.StringUtils;
-import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -23,7 +25,7 @@ import java.util.Objects;
 public class UserInfoInterceptor implements HandlerInterceptor {
 
     @Autowired
-    private RedissonClient redissonClient;
+    private RedisClient redisClient;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -35,7 +37,11 @@ public class UserInfoInterceptor implements HandlerInterceptor {
         String userIdStr = JwtUtils.getDecodedJWT(token).getSubject();
 
         String userIdKey = "userIdKey:" +  userIdStr;
-        UserInfoResp userInfoResp = (UserInfoResp)redissonClient.getBucket(userIdKey).get();
+        String userInfoStr =  redisClient.get(userIdKey);
+        if (StringUtils.isBlank(userInfoStr)) {
+            return false;
+        }
+        UserInfoResp userInfoResp = JSON.parseObject(userInfoStr, UserInfoResp.class);
         if (Objects.isNull(userInfoResp)) {
             return false;
         }
