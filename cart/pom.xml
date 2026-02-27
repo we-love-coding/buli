@@ -1,14 +1,37 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>shopping-cart</artifactId>
+    <artifactId>cart</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>Shopping Cart Module</name>
-    <description>Module for handling shopping cart functionality</description>
+    <modules>
+        <module>cart-api</module>
+        <module>cart-facade</module>
+        <module>cart-common</module>
+        <module>cart-domain</module>
+        <module>cart-dal</module>
+        <module>cart-feign</module>
+        <module>cart-test</module>
+    </modules>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Add your dependencies here -->
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Define your plugins here -->
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
